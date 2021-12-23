@@ -1,11 +1,16 @@
 package gameoflife;
 
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Generation {
 
     private List<Cell> cells = new ArrayList<>();
+
+    public void readFirstGeneration(Path path) {
+
+    }
 
     public void addCell (Cell cell) {
         if (isInsideTable(cell)) {

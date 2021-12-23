@@ -8,13 +8,13 @@ public class Population {
         this.numberOfGenerations = numberOfGenerations;
     }
 
-    public String gameOfLife(Generation generation) {
-        String actualGeneration = "";
+    public void gameOfLife(Generation generation) {
+        String actualGeneration;
         for (int i = 0; i < numberOfGenerations; i++) {
             actualGeneration = generation.toString();
             generation = createNextGeneration(generation);
+            System.out.println(actualGeneration);
         }
-        return actualGeneration;
     }
 
     public Generation createNextGeneration(Generation generation) {
@@ -38,5 +38,4 @@ public class Population {
     public void setNumberOfGenerations(int numberOfGenerations) {
         this.numberOfGenerations = numberOfGenerations;
     }
-
 }
