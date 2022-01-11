@@ -1,8 +1,5 @@
 package gameoflife2;
 
-import gameoflife.Generation;
-import gameoflife.Table;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,13 +16,13 @@ public class Cell {
         this.y = y;
     }
 
-//    public void addExistingNeighbours(Generation generation) {
-//        for (Cell cell : generation.getCells()) {
-//            if (cell.isNeighbour(this) || cell.isNeighbourOppositeSide(this)) {
-//                neighbours.add(cell);
-//            }
-//        }
-//    }
+    public void addExistingNeighbours(Generation generation) {
+        for (Cell cell : generation.getCells()) {
+            if (cell.isNeighbour(this) || cell.isNeighbourOppositeSide(this)) {
+                neighbours.add(cell);
+            }
+        }
+    }
 
     private boolean isNeighbour(Cell cell) {
         return (cell.calculateDistance(this) == 1);
@@ -71,9 +68,9 @@ public class Cell {
     @Override
     public String toString() {
         if (living) {
-            return "|*|";
+            return "*";
         }
-        return "| |";
+        return " ";
     }
 
     public boolean isLiving() {

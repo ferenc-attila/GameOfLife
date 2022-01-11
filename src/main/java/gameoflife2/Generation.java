@@ -1,8 +1,5 @@
 package gameoflife2;
 
-import gameoflife.Cell;
-import gameoflife.Table;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,7 +1,5 @@
 package gameoflife2;
 
-import gameoflife.Table;
-
 public class Position {
 
     private int yCoordinate;

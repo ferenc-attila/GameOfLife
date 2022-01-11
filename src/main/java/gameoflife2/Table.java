@@ -1,15 +1,12 @@
 package gameoflife2;
 
-import gameoflife.Cell;
-import gameoflife.Generation;
-
 public class Table {
 
     public static final int BOUND_OF_X = 200;
     public static final int BOUND_OF_Y = 15;
 
     private char[][] grid = new char[BOUND_OF_Y][BOUND_OF_X];
-    private gameoflife.Generation generation = new Generation();
+    private Generation generation = new Generation();
 
     public Table() {
         createEmptyGeneration();
@@ -43,7 +40,7 @@ public class Table {
     private void createGeneration() {
         for (Cell cell : generation.getCells()) {
             if (cell.isLiving()) {
-                grid[cell.getY()][cell.getX()] = '*';
+                grid[cell.getX()][cell.getY()] = '*';
             }
         }
     }
